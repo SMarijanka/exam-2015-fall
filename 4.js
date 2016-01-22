@@ -2,7 +2,17 @@
 
 // Create a function that counts all the letters in a string,
 // and returns an object that has the letters as keys and the counts as values.
-
+function countLetters(string) {
+	var stringList = string.split('');
+	var output = {};
+	stringList.forEach(function(letter) {
+		if(!(letter in output)) {
+			output[letter] = 0;
+		}
+		output[letter]++;
+	});
+	return output;
+}
 
 
 
